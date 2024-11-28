@@ -115,8 +115,6 @@ nav .cta-btn:hover {
   }
 }
 /* ########################### CONTENIDO##########################################################3 */
-
-/* ########################### CONTENIDO##########################################################3 */
 /* Aplica el color de fondo y la tipografía a todo el cuerpo */
 body {
   background-color: #151837; /* Color de fondo */
@@ -144,7 +142,7 @@ ol {
 }
 
 /* Aplica un gradiente al título */
-.titulo {
+h1 {
   background-image: linear-gradient(
     to right,
     #3acff5,
@@ -203,129 +201,272 @@ ol {
   align-items: center; /* Alinea la imagen verticalmente */
 }
 
+/* ########################################## EJEMPLO PRACTICO #####################################################3 */
+/* Estilo general para los círculos y el contenedor */
+.circulos-container {
+  display: flex;
+  justify-content: space-evenly; /* Alinea los círculos de manera equidistante */
+  align-items: center;
+  margin-top: 20px;
+}
 
-/* Sección de Phishing */
-#phishing {
-    padding: 50px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #1a1d2e, #243b55);
-    color: #ffffff;
-    border-radius: 15px;
-    margin: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+/* Estilo de cada círculo */
+.circulo {
+  background-color: #3acff5; /* Color azul claro */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Forma circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de los íconos */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.circulo p {
+  position: absolute;
+  bottom: -25px;
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Estilo cuando un círculo está activo */
+.circulo.activo {
+  background-color: #0066cc; /* Azul más oscuro cuando está activo */
+  box-shadow: 0 0 10px rgba(0, 102, 204, 0.5); /* Resaltado de los círculos activos */
+}
+
+/* Estilo para la imagen */
+.imagen img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenido-ejemplo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilo de los textos */
+.texto p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Estilo para el botón 'Siguiente' */
+.siguiente-btn {
+  background-color: #3acff5; /* Azul claro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  display: flex; /* Usar flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: auto; /* Ancho automático */
+}
+
+.siguiente-btn i {
+  font-size: 24px; /* Tamaño del ícono */
+}
+
+.siguiente-btn:hover {
+  background-color: #0099cc; /* Cambio de color al pasar el ratón */
+}
+
+/* Contenedor principal centrado con fondo oscuro */
+.informacion-situacion {
+  background: linear-gradient(
+    to right,
+    rgba(58, 207, 245, 0.7),
+    rgba(6, 43, 255, 0.7)
+  );
+  padding: 30px; /* Espaciado alrededor del contenido */
+  margin-top: 40px; /* Separación del contenido anterior */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para agregar profundidad */
+  color: white; /* Texto blanco */
+  display: flex; /* Usamos flexbox */
+  justify-content: space-between; /* Distribuye el texto y la imagen */
+  align-items: center; /* Alinea verticalmente */
+  max-width: 900px; /* Establecemos un ancho máximo */
+  margin-left: auto; /* Centrado horizontal */
+  margin-right: auto; /* Centrado horizontal */
+  font-size: 20px;
+}
+
+/* Estilo para el texto dentro del cuadro */
+.informacion-situacion p {
+  flex: 1; /* El texto ocupa el espacio restante */
+  margin-right: 20px; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilo para la imagen */
+.imagen img {
+  width: 100%;
+  max-width: 250px; /* Limita el tamaño de la imagen */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Contenedor de ejemplo */
+.contenido-ejemplo {
+  display: flex;
+  flex-direction: column; /* Para que los elementos estén uno debajo del otro */
+  align-items: center; /* Centra todo el contenido */
+}
+
+ol {
+  list-style-type: decimal; /* Asegura que sea numerada */
+  padding-left: 20px; /* Espacio a la izquierda */
+}
+
+li {
+  font-size: 16px; /* Tamaño de la fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin-bottom: 10px; /* Espacio entre los items */
+}
+
+
+/* ########################################### Tipos  ###################################3 */
+/* Contenedor principal de la sección */
+.cryptography-section {
+    background-color: #151837; /* Fondo oscuro */
+    padding: 40px;
+    color: white; /* Letra blanca */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Hace que ocupe toda la altura de la ventana */
+}
+
+/* Contenedor de las tarjetas (flexbox para columnas) */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaciado entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en filas si es necesario */
+    justify-content: center; /* Centra las tarjetas */
+}
+
+/* Estilo de cada tarjeta */
+.card {
+    background-color: #1d2342; /* Fondo de cada tarjeta */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 30%; /* Ancho de cada tarjeta */
+    min-width: 250px; /* Ancho mínimo para evitar que se haga demasiado pequeña */
+    flex-grow: 1;
+    opacity: 0; /* Inicialmente ocultas */
+    transform: translateY(30px); /* Desplazadas hacia abajo al inicio */
+    animation: fadeInUp 0.6s ease-out forwards; /* Animación de entrada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para hover */
+    font-size: 24px; /* Tamaño de fuente aumentado */
+}
+
+/* Animación de entrada: tarjetas aparecen desde abajo */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de hover: las tarjetas crecen y la sombra aumenta */
+.card:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la tarjeta */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+/* Títulos de sección con gradiente azul */
+.section-title {
+    font-size: 40px; /* Tamaño de fuente mucho más grande */
+    color: white;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #00aaff, #0044cc); /* Gradiente azul */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Lista de criptografía y consejos prácticos */
+.crypto-list, .practical-tips {
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    padding-left: 0;
+    font-size: 22px; /* Aumenta el tamaño de la fuente en las listas */
+}
+
+/* Tamaño de las listas */
+.crypto-list li, .practical-tips li {
+    margin-bottom: 15px;
+    font-size: 22px; /* Aumenta el tamaño de la fuente en las listas */
+}
+
+/* Resaltar términos importantes en las listas */
+.crypto-list li strong, .practical-tips li strong {
+    color: #00aaff; /* Azul claro para términos importantes */
+    font-weight: bold;
+}
+
+/* Estilo para el párrafo del ejemplo */
+.example-text {
+    font-size: 22px; /* Aumenta el tamaño del texto del ejemplo */
+    color: white; /* Letra blanca */
+    margin-bottom: 20px;
+}
+
+/* Estilo de los elementos de la lista */
+.crypto-list li, .practical-tips li {
+    padding-left: 20px;
     position: relative;
 }
 
-#phishing h1 {
-    font-size: 3rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+.crypto-list li::before, .practical-tips li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00aaff; /* Azul claro para el icono */
+    font-size: 25px; /* Aumenta el tamaño del icono */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-#phishing .descripcion {
-    font-size: 1.2rem;
-    color: #dce7ff;
-    line-height: 1.8;
-    margin-bottom: 40px;
+/* Estilo para la tarjeta grande centrada */
+.card-center {
+    width: 60%; /* Aumenta el tamaño de la tarjeta */
+    transform: scale(1.3); /* Hace la tarjeta más grande */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
 }
 
-#phishing h2 {
-    font-size: 2.2rem;
-    color: #ff6600;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-}
 
-#phishing h3 {
-    font-size: 1.8rem;
-    color: #ff6600;
-    margin-bottom: 15px;
-}
-
-#phishing ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-#phishing ul li {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 1rem;
-    text-align: left;
-}
-
-/* Animación interactiva */
-.phishing-animation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.phishing-animation .email,
-.phishing-animation .phishing-site,
-.phishing-animation .stolen-data {
-    background-color: #1e2a38;
-    padding: 20px;
-    border-radius: 10px;
-    width: 150px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
-
-.phishing-animation .email:hover,
-.phishing-animation .phishing-site:hover,
-.phishing-animation .stolen-data:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(255, 102, 0, 0.5);
-}
-
-.phishing-animation .arrow {
-    font-size: 2.5rem;
-    color: #ff6600;
-    transition: transform 0.3s ease-in-out;
-}
-
-.phishing-animation .arrow:hover {
-    transform: rotate(10deg);
-}
-
-.phishing-animation i {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #ff6600;
-}
-
-/* Footer */
-.footer {
-    background: #1a1d2e;
-    padding: 20px;
-    text-align: center;
-    color: #dce7ff;
-    font-size: 0.9rem;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-}
 
 /* ############ FOOTER ############################### */
 .footer {
-    background-color: #151837; /* Azul oscuro */
-    color: white; /* Texto blanco */
-    font-family: 'Merriweather', serif; /* Fuente Merriweather */
-    padding: 20px; /* Relleno alrededor del contenido */
-    text-align: center; /* Centra el texto */
-    position: relative; /* No Fija el footer al fondo de la página */
-    left: 0;
-    bottom: 0;
-    width: 100%; /* Ocupa todo el ancho */
+  background-color: #151837; /* Azul oscuro */
+  color: white; /* Texto blanco */
+  font-family: "Merriweather", serif; /* Fuente Merriweather */
+  padding: 20px; /* Relleno alrededor del contenido */
+  text-align: center; /* Centra el texto */
+  position: relative; /* No Fija el footer al fondo de la página */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Ocupa todo el ancho */
 }
 
 .footer p {
-    margin: 0; /* Elimina el margen por defecto */
+  margin: 0; /* Elimina el margen por defecto */
 }
