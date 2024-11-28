@@ -1,0 +1,458 @@
+/*  ########################################  NAV  ############################################################# */
+
+/* Cargar tipografía Merriweather Sans desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap");
+
+/* Elimina márgenes y paddings predeterminados */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+/* General para el header */
+header {
+   padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Centra el contenido del nav horizontalmente */
+  align-items: center; /* Alineación vertical */
+  width: 100%;
+}
+
+/* Contenedor general del <nav> */
+nav {
+  display: flex;
+  justify-content: space-between; /* Espacio entre los bloques */
+  align-items: center;
+  width: 100%; /* Ocupará todo el ancho del header */
+  max-width: 1200px; /* Opcional: Limita el ancho del nav */
+}
+
+/* Logo: Alineado a la izquierda */
+nav .logo {
+  flex: 0 0 auto; /* Evita que el logo se estire */
+  margin-right: auto; /* Empuja los elementos siguientes hacia el centro */
+}
+
+nav .logo img {
+  max-height: 50px; /* Limita el tamaño del logo */
+}
+
+/* Lista de navegación: Centrada */
+nav .nav-links {
+  display: flex;
+  flex: 1; /* Ocupará el espacio disponible entre el logo y el botón */
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Espaciado entre elementos de la lista */
+nav .nav-links li {
+  margin: 0 15px; /* Espaciado lateral */
+}
+
+/* Estilo de los enlaces */
+nav .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap; /* Evita saltos de línea */
+}
+
+/* Efecto hover en los enlaces */
+nav .nav-links li a:hover {
+  color: #ff6600; /* Cambia a naranja */
+  transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Botón CTA: Alineado a la derecha */
+nav .cta-btn {
+  flex: 0 0 auto; /* Evita que el botón crezca */
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Degradado */
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-left: 20px; /* Separación del último elemento */
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+nav .cta-btn:hover {
+  background: linear-gradient(
+    90deg,
+    #00b3e6,
+    #0051b2
+  ); /* Cambia el degradado */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Responsividad: Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Cambia la dirección de los elementos */
+    align-items: center;
+  }
+  nav ul.nav-links {
+    flex-direction: column; /* Pone los enlaces en columna */
+    align-items: center;
+  }
+  nav ul.nav-links li {
+    margin: 10px 0;
+  }
+  nav .cta-btn {
+    margin-top: 15px;
+  }
+}
+/* ########################### CONTENIDO##########################################################3 */
+/* Aplica el color de fondo y la tipografía a todo el cuerpo */
+body {
+  background-color: #151837; /* Color de fondo */
+  font-family: "Merriweather Sans", sans-serif; /* Tipografía */
+  color: white; /* Color de texto blanco para contraste */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos adicionales para el contenido */
+#criptografia {
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700; /* Negrita en los títulos */
+}
+
+.descripcion,
+ul,
+ol {
+  font-weight: 400; /* Peso normal para los párrafos */
+}
+
+/* Aplica un gradiente al título */
+h1 {
+  background-image: linear-gradient(
+    to right,
+    #3acff5,
+    #062bff
+  ); /* Gradiente de izquierda a derecha */
+  -webkit-background-clip: text; /* Hace que el gradiente se aplique solo al texto */
+  color: transparent; /* Hace que el texto sea transparente para mostrar solo el gradiente */
+  font-size: 2.5rem; /* Tamaño del título (ajustable según necesidad) */
+  font-weight: 700; /* Negrita */
+  text-align: center; /* Centra el título */
+}
+
+/* ###########################   CONCEPTO  ###############################################*/
+/* Estilo para el contenedor del concepto con gradiente transparente */
+.concepto-container {
+  display: flex; /* Usamos flexbox para distribuir el texto y la imagen */
+  background: linear-gradient(
+    to right,
+    rgba(58, 207, 245, 0.7),
+    rgba(6, 43, 255, 0.7)
+  ); /* Gradiente con opacidad */
+  padding: 40px; /* Aumentamos el padding para que la sección ocupe más espacio */
+  border-radius: 10px; /* Bordes redondeados para el cuadro */
+  margin: 40px 0; /* Añadimos un margen para separar la sección */
+  color: white; /* Color de texto blanco para el contraste */
+  height: 400px; /* Establecemos una altura mayor para la sección */
+}
+
+.subtitulo {
+  font-size: 3.5rem;
+}
+
+/* Estilo para el texto dentro del contenedor */
+.texto-concepto {
+  flex: 1; /* Hace que el texto ocupe el espacio restante */
+  padding-right: 20px; /* Espacio entre el texto y la imagen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el texto verticalmente */
+}
+
+/* Estilo para el párrafo, limitamos su altura */
+.texto-concepto .descripcion {
+  max-width: 1000px; /* Limita la altura del párrafo */
+  overflow: hidden; /* Oculta el texto que sobrepasa la altura máxima */
+  text-overflow: ellipsis; /* Añade "..." si el texto es demasiado largo */
+  line-height: 1.5; /* Ajusta el interlineado para mayor legibilidad */
+  font-size: 24px;
+}
+
+/* Estilo para la imagen dentro del contenedor */
+.imagen-concepto {
+  flex: 0 0 400px; /* Hacemos que el contenedor de la imagen tenga un tamaño mayor */
+  display: flex;
+  justify-content: center; /* Centra la imagen en su contenedor */
+  align-items: center; /* Alinea la imagen verticalmente */
+}
+
+/* ########################################## EJEMPLO PRACTICO #####################################################3 */
+/* Estilo general para los círculos y el contenedor */
+.circulos-container {
+  display: flex;
+  justify-content: space-evenly; /* Alinea los círculos de manera equidistante */
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo de cada círculo */
+.circulo {
+  background-color: #3acff5; /* Color azul claro */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Forma circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de los íconos */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.circulo p {
+  position: absolute;
+  bottom: -25px;
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Estilo cuando un círculo está activo */
+.circulo.activo {
+  background-color: #0066cc; /* Azul más oscuro cuando está activo */
+  box-shadow: 0 0 10px rgba(0, 102, 204, 0.5); /* Resaltado de los círculos activos */
+}
+
+/* Estilo para la imagen */
+.imagen img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenido-ejemplo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilo de los textos */
+.texto p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Estilo para el botón 'Siguiente' */
+.siguiente-btn {
+  background-color: #3acff5; /* Azul claro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  display: flex; /* Usar flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: auto; /* Ancho automático */
+}
+
+.siguiente-btn i {
+  font-size: 24px; /* Tamaño del ícono */
+}
+
+.siguiente-btn:hover {
+  background-color: #0099cc; /* Cambio de color al pasar el ratón */
+}
+
+/* Contenedor principal centrado con fondo oscuro */
+.informacion-situacion {
+  background: linear-gradient(
+    to right,
+    rgba(58, 207, 245, 0.7),
+    rgba(6, 43, 255, 0.7)
+  );
+  padding: 30px; /* Espaciado alrededor del contenido */
+  margin-top: 40px; /* Separación del contenido anterior */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para agregar profundidad */
+  color: white; /* Texto blanco */
+  display: flex; /* Usamos flexbox */
+  justify-content: space-between; /* Distribuye el texto y la imagen */
+  align-items: center; /* Alinea verticalmente */
+  max-width: 900px; /* Establecemos un ancho máximo */
+  margin-left: auto; /* Centrado horizontal */
+  margin-right: auto; /* Centrado horizontal */
+  font-size: 20px;
+}
+
+/* Estilo para el texto dentro del cuadro */
+.informacion-situacion p {
+  flex: 1; /* El texto ocupa el espacio restante */
+  margin-right: 20px; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilo para la imagen */
+.imagen img {
+  width: 100%;
+  max-width: 250px; /* Limita el tamaño de la imagen */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Contenedor de ejemplo */
+.contenido-ejemplo {
+  display: flex;
+  flex-direction: column; /* Para que los elementos estén uno debajo del otro */
+  align-items: center; /* Centra todo el contenido */
+}
+
+ol {
+  list-style-type: decimal; /* Asegura que sea numerada */
+  padding-left: 20px; /* Espacio a la izquierda */
+}
+
+li {
+  font-size: 16px; /* Tamaño de la fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin-bottom: 10px; /* Espacio entre los items */
+}
+
+
+/* ########################################### Tipos  ###################################3 */
+
+/* Contenedor principal de la sección */
+.cryptography-section {
+    background-color: #151837; /* Fondo oscuro */
+    padding: 40px;
+    color: white; /* Letra blanca */
+}
+
+/* Contenedor de las tarjetas (flexbox para columnas) */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaciado entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en filas si es necesario */
+}
+
+/* Estilo de cada tarjeta */
+.card {
+    background-color: #1d2342; /* Fondo de cada tarjeta */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 30%; /* Ancho de cada tarjeta */
+    min-width: 250px; /* Ancho mínimo para evitar que se haga demasiado pequeña */
+    flex-grow: 1;
+    opacity: 0; /* Inicialmente ocultas */
+    transform: translateY(30px); /* Desplazadas hacia abajo al inicio */
+    animation: fadeInUp 0.6s ease-out forwards; /* Animación de entrada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para hover */
+}
+
+/* Animación de entrada: tarjetas aparecen desde abajo */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de hover: las tarjetas crecen y la sombra aumenta */
+.card:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la tarjeta */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+/* Títulos de sección con gradiente azul */
+.section-title {
+    font-size: 28px; /* Tamaño de fuente más grande */
+    color: white;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #00aaff, #0044cc); /* Gradiente azul */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Lista de criptografía y consejos prácticos */
+.crypto-list, .practical-tips {
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    padding-left: 0;
+}
+
+/* Tamaño de las listas */
+.crypto-list li, .practical-tips li {
+    margin-bottom: 15px;
+    font-size: 18px; /* Fuente más grande */
+}
+
+/* Resaltar términos importantes en las listas */
+.crypto-list li strong, .practical-tips li strong {
+    color: #00aaff; /* Azul claro para términos importantes */
+    font-weight: bold;
+}
+
+/* Estilo para el párrafo del ejemplo */
+.example-text {
+    font-size: 18px; /* Fuente más grande */
+    color: white; /* Letra blanca */
+    margin-bottom: 20px;
+}
+
+/* Estilo de los elementos de la lista */
+.crypto-list li, .practical-tips li {
+    padding-left: 20px;
+    position: relative;
+}
+
+.crypto-list li::before, .practical-tips li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00aaff; /* Azul claro para el icono */
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* ############ FOOTER ############################### */
+.footer {
+  background-color: #151837; /* Azul oscuro */
+  color: white; /* Texto blanco */
+  font-family: "Merriweather", serif; /* Fuente Merriweather */
+  padding: 20px; /* Relleno alrededor del contenido */
+  text-align: center; /* Centra el texto */
+  position: relative; /* No Fija el footer al fondo de la página */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+.footer p {
+  margin: 0; /* Elimina el margen por defecto */
+}
