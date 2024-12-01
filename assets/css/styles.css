@@ -249,7 +249,7 @@ nav .cta-btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, #1a1d2e, #1a4e7b); /* Fondo degradado */
+  background: linear-gradient(90deg, #067290, #0072ff);
   padding: 50px;
   border-radius: 15px; /* Bordes redondeados */
 }
@@ -257,11 +257,9 @@ nav .cta-btn:hover {
 /* Estilo para las palabras importantes */
 .important {
   font-weight: bold; /* Negrita */
-  background: linear-gradient(45deg, #00c6ff, #0072ff, #00ffcc); /* Gradiente de colores */
-  -webkit-background-clip: text; /* Aplica el fondo solo al texto */
-  color: transparent; /* Hace que el texto sea transparente para mostrar solo el gradiente */
+  color: #34d0fb;
+  text-shadow: black;
 }
-
 
 /* Contenedor de la imagen */
 .fundamentos-section .image-content {
@@ -580,7 +578,7 @@ nav .cta-btn:hover {
 
 /* SECCIÓN INFORMACIÓN */
 #informacion {
-background: linear-gradient(45deg, #00c6ff, #0072ff, #0066ff);
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #0066ff);
   color: #ffffff;
   padding: 50px 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
