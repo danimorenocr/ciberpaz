@@ -152,7 +152,6 @@ nav .cta-btn:hover {
   padding: 80px 20px; /* Espaciado superior e inferior */
   text-align: center; /* Centra el contenido */
   border-radius: 20px; /* Bordes redondeados */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra sutil */
 }
 
 #background-animation {
@@ -250,17 +249,19 @@ nav .cta-btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, #067290, #0072ff); /* Degradado azul */
+  background: linear-gradient(90deg, #1a1d2e, #1a4e7b); /* Fondo degradado */
   padding: 50px;
   border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 /* Estilo para las palabras importantes */
 .important {
-  color: #012548; /* Azul oscuro */
   font-weight: bold; /* Negrita */
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #00ffcc); /* Gradiente de colores */
+  -webkit-background-clip: text; /* Aplica el fondo solo al texto */
+  color: transparent; /* Hace que el texto sea transparente para mostrar solo el gradiente */
 }
+
 
 /* Contenedor de la imagen */
 .fundamentos-section .image-content {
@@ -285,17 +286,17 @@ nav .cta-btn:hover {
 .fundamentos-section .text-content {
   flex: 2;
   color: white;
-  font-family: Arial, sans-serif;
 }
 
 .fundamentos-section .text-content h2 {
-  font-size: 2em;
+  font-size: 4em;
   margin-bottom: 20px;
   font-weight: bold; /* Hacer que el título resalte */
+  text-align: center;
 }
 
 .fundamentos-section .text-content p {
-  font-size: 1.5em;
+  font-size: 1.7em;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -303,18 +304,22 @@ nav .cta-btn:hover {
 .fundamentos-section .text-content ul {
   list-style-type: none;
   padding-left: 0;
+  column-count: 3; /* Divide la lista en 3 columnas */
+  column-gap: 30px; /* Espacio entre columnas */
 }
 
 .fundamentos-section .text-content ul li {
-  font-size: 1.1em;
+  font-size: 1.3em; /* Aumenta el tamaño de la fuente */
   margin: 10px 0;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los textos */
 }
 
-/* Mejorar la visibilidad del texto */
-.fundamentos-section .text-content h2,
-.fundamentos-section .text-content p,
-.fundamentos-section .text-content ul {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los textos */
+/* Icono de check */
+.check-icon {
+  color: #00c6ff; /* Color azul */
+  font-size: 2rem;
+  margin-right: 10px; /* Espacio entre el icono y el texto */
 }
 
 #tipos-de-ataques {
@@ -337,26 +342,6 @@ nav .cta-btn:hover {
   padding: 50px;
   border-radius: 15px; /* Bordes redondeados */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-}
-
-/* Estilo para la lista */
-ul {
-  list-style-type: none; /* Elimina los puntos por defecto */
-  padding-left: 0;
-}
-
-/* Estilo para los elementos de lista */
-ul li {
-  font-size: 1.2em;
-  margin: 10px 0;
-  position: relative;
-}
-
-/* Icono de check */
-.check-icon {
-  color: #1a1d2e; /* Color verde */
-  font-size: 1.5em;
-  margin-right: 10px; /* Espacio entre el icono y el texto */
 }
 
 /*  ########################################  TARJETAS  ############################################################# */
@@ -413,7 +398,7 @@ ul li {
 /* Estilos generales para los iconos */
 .attack-card .icon-card {
   font-size: 3rem; /* Tamaño del icono */
-  color: #ffffff;  /* Color del icono, puedes ajustarlo */
+  color: #ffffff; /* Color del icono, puedes ajustarlo */
   margin-bottom: 15px;
   display: block;
   text-align: center; /* Centrar el icono */
@@ -595,29 +580,26 @@ ul li {
 
 /* SECCIÓN INFORMACIÓN */
 #informacion {
-  background: linear-gradient(135deg, #002855, #004e92);
+background: linear-gradient(45deg, #00c6ff, #0072ff, #0066ff);
   color: #ffffff;
   padding: 50px 20px;
-  border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   text-align: center;
   overflow: hidden;
   position: relative;
-  animation: fadeInSlide 1.5s ease-in-out;
 }
 
 #informacion h2 {
   font-size: 2.8rem;
   margin-bottom: 20px;
   color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
   font-weight: bold;
   animation: fadeIn 2s ease-in-out;
 }
 
 #informacion p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.5rem;
+  line-height: 2;
   margin-bottom: 30px;
   color: #dce7ff;
   animation: fadeIn 2s ease-in-out;
@@ -628,19 +610,18 @@ ul li {
   padding: 15px 30px;
   font-size: 1.2rem;
   color: #ffffff;
-  background: linear-gradient(90deg, #ff6a88, #ff99ac);
+  background: linear-gradient(90deg, #0eff4e, #08a432);
   border: none;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 5px 15px rgba(255, 105, 135, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: buttonPulse 2s infinite;
 }
 
 #informacion .cta-button:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.6);
+  box-shadow: 0 8px 20px #077825;
 }
 
 /* ANIMACIONES */
